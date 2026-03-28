@@ -1,0 +1,33 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;700&family=JetBrains+Mono:wght@400&display=swap");
+
+/* === Reset === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* === Typography === */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+}
+
+/* === Animations === */
+.utility__reveal-section {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.utility__revealed {
+  opacity: 1;
+  transform: translateY(0);
+  transition: 0.5s ease;
+}
+
+/* === Utilities === */

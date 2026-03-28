@@ -1,0 +1,269 @@
+.education {
+	padding: var(--space-lg) var(--space-md);
+}
+
+.education__label {
+	display: block;
+	margin-bottom: var(--space-lg);
+	font-size: 12px;
+	font-weight: 600;
+	font-family: var(--font-mono);
+	letter-spacing: 0.08em;
+	color: var(--muted);
+	text-transform: uppercase;
+    margin-left: 125px;
+}
+
+.education__grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: var(--space-lg);
+	max-width: 1000px;
+	margin: 0 auto;
+}
+
+/* Left Column: Education Timeline */
+.education__column {
+	display: flex;
+	flex-direction: column;
+}
+
+.education__column--left {
+	gap: var(--space-md);
+}
+
+.education__column--right {
+	gap: var(--space-xl);
+}
+
+/* Education Cards */
+.education__card {
+	background: var(--surface);
+	border: 1px solid var(--border);
+	border-left: 3px solid var(--accent);
+	border-radius: var(--radius-lg);
+	padding: var(--space-md) 28px;
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+}
+
+.education__year {
+	font-size: 11px;
+	font-weight: 400;
+	font-family: var(--font-mono);
+	color: var(--muted);
+	letter-spacing: 0.05em;
+}
+
+.education__degree {
+	font-size: 16px;
+	font-weight: 600;
+	color: var(--text);
+	margin: 0;
+}
+
+.education__institution {
+	font-size: 13px;
+	color: var(--muted);
+}
+
+.education__badge {
+	align-self: flex-start;
+	padding: 4px 10px;
+	border-radius: var(--radius-sm);
+	font-size: 11px;
+	font-weight: 500;
+	font-family: var(--font-mono);
+	letter-spacing: 0.04em;
+	text-transform: uppercase;
+}
+
+.education__badge--amber {
+	background: rgba(240, 165, 0, 0.1);
+	color: var(--accent);
+	border: 1px solid rgba(240, 165, 0, 0.3);
+}
+
+.education__note {
+	font-size: 12px;
+	font-style: italic;
+	color: var(--subtle);
+	margin: 0;
+	margin-top: 4px;
+}
+
+.education__cgpa {
+	font-size: 12px;
+	font-weight: 600;
+	color: var(--accent);
+	margin-top: 4px;
+}
+
+.education__board {
+	font-size: 11px;
+	color: var(--subtle);
+	font-family: var(--font-mono);
+}
+
+/* Connector Line */
+.education__connector {
+	width: 1px;
+	height: 16px;
+	background: var(--border);
+	margin: -8px auto;
+}
+
+/* Internship & Certifications Blocks */
+.education__block {
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+}
+
+.education__section-label {
+	font-size: 11px;
+	font-weight: 600;
+	font-family: var(--font-mono);
+	letter-spacing: 0.08em;
+	color: var(--muted);
+	text-transform: uppercase;
+}
+
+.education__company {
+	font-size: 15px;
+	font-weight: 600;
+	color: var(--text);
+	margin: 0;
+}
+
+.education__role {
+	font-size: 13px;
+	color: var(--muted);
+}
+
+.education__duration {
+	font-size: 11px;
+	font-weight: 400;
+	font-family: var(--font-mono);
+	color: var(--subtle);
+	letter-spacing: 0.04em;
+}
+
+/* Project Tags */
+.education__projects {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px;
+	margin-top: 4px;
+}
+
+.education__project-tag {
+	padding: 6px 10px;
+	background: var(--surface-hover);
+	border-radius: var(--radius-sm);
+	font-size: 11px;
+	font-weight: 500;
+	font-family: var(--font-mono);
+	color: var(--text);
+	letter-spacing: 0.03em;
+}
+
+.education__internship-note {
+	font-size: 13px;
+	font-style: italic;
+	color: var(--muted);
+	margin: 4px 0 0 0;
+	line-height: 1.4;
+}
+
+/* Certification Rows */
+.education__cert-row {
+	display: flex;
+	align-items: flex-start;
+	gap: 10px;
+}
+
+.education__cert-dot {
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	flex-shrink: 0;
+	margin-top: 6px;
+}
+
+.education__cert-dot--amber {
+	background: var(--accent);
+}
+
+.education__cert-dot--teal {
+	background: #4a9d6f;
+}
+
+.education__cert-content {
+	display: flex;
+	flex-direction: column;
+	gap: 2px;
+}
+
+.education__cert-name {
+	font-size: 13px;
+	font-weight: 500;
+	color: var(--text);
+}
+
+.education__cert-issuer {
+	font-size: 12px;
+	color: var(--muted);
+}
+
+/* Mobile Responsive */
+@media (max-width: 820px) {
+	.education {
+		padding: var(--space-lg) var(--space-md);
+	}
+
+	.education__grid {
+		grid-template-columns: 1fr;
+		gap: var(--space-lg);
+	}
+
+	.education__column--left {
+		order: 1;
+	}
+
+	.education__column--right {
+		order: 2;
+	}
+
+	.education__card {
+		padding: var(--space-sm) var(--space-md);
+	}
+}
+
+@media (max-width: 640px) {
+	.education {
+		padding: var(--space-md);
+	}
+
+	.education__label {
+		margin-bottom: var(--space-md);
+	}
+
+	.education__degree {
+		font-size: 14px;
+	}
+
+	.education__company {
+		font-size: 14px;
+	}
+
+	.education__projects {
+		gap: 6px;
+	}
+
+	.education__project-tag {
+		font-size: 10px;
+		padding: 4px 8px;
+	}
+}

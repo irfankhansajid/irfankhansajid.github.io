@@ -1,0 +1,125 @@
+.featured-demo {
+  margin-bottom: var(--space-md);
+}
+
+.featured-demo__label {
+  margin-bottom: 10px;
+  color: var(--accent);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.featured-demo__form {
+  margin-bottom: 10px;
+}
+
+.featured-demo__input-label {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--muted);
+  font-family: var(--font-mono);
+  font-size: 12px;
+}
+
+.featured-demo__input-row {
+  display: flex;
+  gap: 8px;
+}
+
+.featured-demo__input {
+  flex: 1;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+  color: var(--text);
+  font-family: var(--font-mono);
+  font-size: 12px;
+  padding: 8px 10px;
+}
+
+.featured-demo__input:focus {
+  outline: none;
+  border-color: var(--border-hover);
+}
+
+.featured-demo__send {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--surface-hover);
+  color: var(--text);
+  font-family: var(--font-mono);
+  font-size: 12px;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.featured-demo__send:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.featured-demo__terminal {
+  min-height: 128px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  background: #0d0d14;
+  padding: 12px;
+}
+
+.featured-demo__log {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  line-height: 1.6;
+  opacity: 0;
+  animation: featured-demo__fade-in 0.25s ease forwards;
+}
+
+.featured-demo__log::before {
+  content: "> ";
+}
+
+.featured-demo__log--amber {
+  color: var(--accent);
+}
+
+.featured-demo__log--teal {
+  color: #0fa87e;
+}
+
+.featured-demo__log--success {
+  color: #48c774;
+}
+
+.featured-demo__log--muted {
+  color: var(--text);
+}
+
+.featured-demo__reset {
+  margin-top: 10px;
+  border: none;
+  background: transparent;
+  color: var(--muted);
+  font-family: var(--font-mono);
+  font-size: 12px;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  cursor: pointer;
+}
+
+.featured-demo__reset:hover {
+  color: var(--text);
+}
+
+@keyframes featured-demo__fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
