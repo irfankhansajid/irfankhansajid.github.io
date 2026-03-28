@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Secure Notes Breakdown | Irfan Khan Sajid</title>
+    <meta name="description" content="How the Secure Notes app handles auth, per-user ownership, and deployment across Render and Vercel." />
+    <link rel="canonical" href="https://irfankhansajid.github.io/stories/note.html" />
+    <style>
+      body { margin: 0; background: #0a0a0f; color: #e8e6de; font: 16px/1.75 Inter, system-ui, sans-serif; }
+      main { max-width: 860px; margin: 0 auto; padding: 56px 20px 72px; }
+      a { color: #f0a500; text-decoration: none; }
+      a:hover { text-decoration: underline; text-underline-offset: 4px; }
+      .kicker { color: #888780; font: 12px/1.4 "JetBrains Mono", monospace; letter-spacing: .1em; text-transform: uppercase; }
+      h1 { font: 400 48px/1.1 "DM Serif Display", Georgia, serif; margin: 12px 0 20px; }
+      h2 { margin-top: 36px; font-size: 24px; }
+      p { margin: 14px 0; }
+      .card { margin-top: 30px; border: 1px solid rgba(255,255,255,.08); border-radius: 16px; padding: 20px; background: #121218; }
+      .meta { margin-top: 32px; color: #888780; font-size: 14px; }
+    </style>
+  </head>
+  <body>
+    <main>
+      <a href="/">← Back to portfolio</a>
+      <p class="kicker">Project Story</p>
+      <h1>Secure Notes: Auth, Ownership, and Clean Separation</h1>
+      <p>
+        This project focused on one key idea: every note belongs to one user and no request can bypass that ownership model.
+        The backend enforces identity first, then data access.
+      </p>
+      <h2>Ownership Model</h2>
+      <p>
+        JWT identity is attached to each API request. Database queries are filtered by authenticated user id, not by client-provided values.
+        This prevents cross-user data leaks by design.
+      </p>
+      <div class="card">
+        <strong>API pattern</strong>
+        <p>Auth middleware → User identity resolution → Ownership-constrained query → Response serialization</p>
+      </div>
+      <h2>Deployment Split</h2>
+      <p>
+        Backend is deployed independently from the frontend. Render hosts the API and Vercel serves the React client.
+        The split keeps frontend iteration fast while backend changes remain isolated.
+      </p>
+      <p class="meta">Stack: Java, Spring Boot, Spring Security, JWT, PostgreSQL, React, Docker, Render, Vercel</p>
+    </main>
+  </body>
+</html>
