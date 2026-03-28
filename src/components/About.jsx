@@ -57,6 +57,10 @@ function About() {
 						>
 							Download CV (PDF) ↓
 						</a>
+
+						<p className="about__resume-note">
+							Resume is maintained in both international and local formats.
+						</p>
 					</div>
 
 					<aside className="about__stack">
@@ -73,6 +77,10 @@ function About() {
 								</div>
 							</div>
 						))}
+
+						<a className="about__skills-link" href="/skills/index.html" target="_blank" rel="noopener noreferrer">
+							View all skills ↗
+						</a>
 					</aside>
 				</div>
 			</div>

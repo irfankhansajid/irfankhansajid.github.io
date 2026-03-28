@@ -7,11 +7,13 @@ export default defineConfig({
 	plugins: [react()],
 	base: new URL(homepage).pathname || "/",
 	build: {
+		minify: "esbuild",
+		cssMinify: true,
+		reportCompressedSize: true,
 		rollupOptions: {
 			output: {
 				manualChunks: {
-					react: ["react"],
-					"react-dom": ["react-dom"],
+					vendor: ["react", "react-dom"],
 				},
 			},
 		},

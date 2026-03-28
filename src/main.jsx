@@ -4,6 +4,16 @@ import App from "./App";
 import "./styles/tokens.css";
 import "./styles/globals.css";
 
+const plausibleDomain = import.meta.env.VITE_PLAUSIBLE_DOMAIN;
+
+if (plausibleDomain) {
+	const script = document.createElement("script");
+	script.defer = true;
+	script.dataset.domain = plausibleDomain;
+	script.src = "https://plausible.io/js/script.js";
+	document.head.append(script);
+}
+
 ReactDOM.createRoot(document.getElementById("root")).render(
 	<React.StrictMode>
 		<App />

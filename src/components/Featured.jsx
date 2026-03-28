@@ -107,6 +107,15 @@ function Featured() {
 							>
 								View source on GitHub ↗
 							</a>
+
+							<a
+								className="featured__link featured__link--secondary"
+								href="/stories/nurun.html"
+								target="_blank"
+								rel="noopener noreferrer"
+							>
+								Read full breakdown →
+							</a>
 						</div>
 					</aside>
 				</div>

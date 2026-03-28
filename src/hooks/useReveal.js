@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 
-function useReveal(threshold = 0.15) {
+function useReveal(threshold = 0.1) {
   const sectionRef = useRef(null);
 
   useEffect(() => {
@@ -17,7 +17,10 @@ function useReveal(threshold = 0.15) {
           currentObserver.unobserve(element);
         }
       },
-      { threshold }
+      {
+        threshold,
+        rootMargin: "0px 0px -50px 0px",
+      }
     );
 
     observer.observe(element);

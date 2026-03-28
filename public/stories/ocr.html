@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OCR System Breakdown | Irfan Khan Sajid</title>
+    <meta name="description" content="From internship prototype to standalone OCR work: image preprocessing, text extraction flow, and implementation lessons." />
+    <link rel="canonical" href="https://irfankhansajid.github.io/stories/ocr.html" />
+    <style>
+      body { margin: 0; background: #0a0a0f; color: #e8e6de; font: 16px/1.75 Inter, system-ui, sans-serif; }
+      main { max-width: 860px; margin: 0 auto; padding: 56px 20px 72px; }
+      a { color: #f0a500; text-decoration: none; }
+      a:hover { text-decoration: underline; text-underline-offset: 4px; }
+      .kicker { color: #888780; font: 12px/1.4 "JetBrains Mono", monospace; letter-spacing: .1em; text-transform: uppercase; }
+      h1 { font: 400 48px/1.1 "DM Serif Display", Georgia, serif; margin: 12px 0 20px; }
+      h2 { margin-top: 36px; font-size: 24px; }
+      p { margin: 14px 0; }
+      .card { margin-top: 30px; border: 1px solid rgba(255,255,255,.08); border-radius: 16px; padding: 20px; background: #121218; }
+      .meta { margin-top: 32px; color: #888780; font-size: 14px; }
+    </style>
+  </head>
+  <body>
+    <main>
+      <a href="/">← Back to portfolio</a>
+      <p class="kicker">Project Story</p>
+      <h1>OCR System: From Internship Build to Independent Extension</h1>
+      <p>
+        The OCR system began during internship work and later became a separate practice project to deepen image processing fundamentals.
+      </p>
+      <h2>Pipeline</h2>
+      <p>
+        The flow starts with image normalization and preprocessing, then character segmentation and extraction, and finally text output formatting.
+        This approach improved consistency compared with direct raw-image extraction.
+      </p>
+      <div class="card">
+        <strong>Processing stages</strong>
+        <p>Input image → Preprocess/denoise → Segment regions → Extract characters → Return plain text</p>
+      </div>
+      <h2>What Changed After Internship</h2>
+      <p>
+        The standalone version focused on code structure, repeatable test inputs, and better handling for low-quality text regions.
+        The goal was to understand trade-offs, not just produce demo output.
+      </p>
+      <p class="meta">Stack: Java, Image Processing, OCR pipeline concepts, ML basics</p>
+    </main>
+  </body>
+</html>

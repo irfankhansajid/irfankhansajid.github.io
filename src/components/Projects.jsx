@@ -9,7 +9,9 @@ const projects = [
 		description:
 			"A full-stack application with JWT-based user authentication and per-user data isolation. Every note is tied to its owner — no shared access, no leaks.",
 		tech: ["Java", "Spring Boot", "PostgreSQL", "React", "JWT"],
-		href: "https://github.com/irfankhansajid/note",
+		liveHref: "https://note-irfan.vercel.app/",
+		sourceHref: "https://github.com/irfankhansajid/note",
+		briefHref: "/stories/note.html",
 	},
 	{
 		id: "02",
@@ -18,7 +20,8 @@ const projects = [
 		description:
 			"An optical character recognition system that captures character data from images and returns plain text. Built to understand how ML-based text extraction works at an implementation level.",
 		tech: ["Java", "Image Processing", "ML"],
-		href: "https://github.com/irfankhansajid/Optical-Character-Recognition---OCR.",
+		sourceHref: "https://github.com/irfankhansajid/Optical-Character-Recognition---OCR.",
+		briefHref: "/stories/ocr.html",
 	},
 ];
 
@@ -29,7 +32,12 @@ function Projects() {
 	return (
 		<section className="projects utility__reveal-section" id="projects" ref={sectionRef}>
 			<div className="projects__inner">
-				<p className="projects__label">More Work</p>
+				<div className="projects__head">
+					<p className="projects__label">More Work</p>
+					<a className="projects__all-link" href="/projects/index.html" target="_blank" rel="noopener noreferrer">
+						View All Projects ↗
+					</a>
+				</div>
 
 				<div className="projects__grid">
 					{projects.map((project) => (
@@ -47,14 +55,38 @@ function Projects() {
 								))}
 							</div>
 
-							<a
-								className="projects__link"
-								href={project.href}
-								target="_blank"
-								rel="noopener noreferrer"
-							>
-								View source →
-							</a>
+							<div className="projects__actions">
+								{project.liveHref ? (
+									<a
+										className="projects__link projects__link--live"
+										href={project.liveHref}
+										target="_blank"
+										rel="noopener noreferrer"
+									>
+										Live demo ↗
+									</a>
+								) : null}
+
+								{project.briefHref ? (
+									<a
+										className="projects__link projects__link--brief"
+										href={project.briefHref}
+										target="_blank"
+										rel="noopener noreferrer"
+									>
+										Project brief →
+									</a>
+								) : null}
+
+								<a
+									className="projects__link"
+									href={project.sourceHref}
+									target="_blank"
+									rel="noopener noreferrer"
+								>
+									View source ↗
+								</a>
+							</div>
 						</article>
 					))}
 				</div>
